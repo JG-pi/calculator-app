@@ -20,12 +20,18 @@
     <!-- where the main UI code will be (HTML) -->
     <h1>Calculator</h1>
     <div>
-      
+      <input id="message" type="text">
+      <button onclick="announce()">Annouce</button>
     </div>
   </body>
 
   <script>
     // This section is for all the code: Javascript
     let i = 1; 
+    function announce() {
+      const inputElement = document.getElementById('message');
+      const message = inputElement.value;
+      alert(message);
+    }
   </script>
 </html>
