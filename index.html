@@ -11,27 +11,43 @@
 
   <style>
     /* styles for the website: CSS */
-    h1 {
-      color: red;
-    }
+    * {
+
   </style>
 
   <body>
     <!-- where the main UI code will be (HTML) -->
     <h1>Calculator</h1>
-    <div>
-      <input id="message" type="text">
-      <button onclick="announce()">Annouce</button>
+    <div class="button-grid">
+    <input id="message" type="text"> <br>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>DEL</button> <br>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>+</button> <br>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>-</button> <br>
+
+      <button>%</button>
+      <button>0</button>
+      <button>.</button>
+      <button>&times;</button> <br>
+
+      <button>AC</button>
+      <button>÷</button>
+      <button>=</button>
+
     </div>
   </body>
 
   <script>
     // This section is for all the code: Javascript
-    let i = 1; 
-    function announce() {
-      const inputElement = document.getElementById('message');
-      const message = inputElement.value;
-      alert(message);
-    }
+    
   </script>
-</html>
