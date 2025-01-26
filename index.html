@@ -14,26 +14,23 @@
     * {   margin: 0;
     padding: 0;
     }
-
     h1 {
-      color: red;
+      color: black;
+      font-family: fantasy;
     }
-
     .button-grid{
       height: 430px;
       width: 300px;
       background-color: blanchedalmond;
-      margin: 50px auto;
+      margin: 30px auto;
       padding: 24px;      
     }
-
     .button-grid>input{
       height: 50px;
       width: 100%;
       font-size: 24px;
       margin-bottom: 20px;
     }
-
     .button-grid>button{
       height: 70px;
       width: 60px;
@@ -42,42 +39,57 @@
       margin-right: 5px;
       font-size: 20px;
     }
-
   </style>
 
   <body>
     <!-- where the main UI code will be (HTML) -->
-    <h1>Calculator</h1>
+    <h1>Simple Calculator</h1>
     <div class="button-grid">
-    <input id="message" type="text"> <br>
+    <input id="displayScreen" type="text"> <br>
       <button onclick="AddCount(this.innerText)">7</button>
-      <button>8</button>
-      <button>9</button>
-      <button>DEL</button> <br>
+      <button onclick="AddCount(this.innerText)">8</button>
+      <button onclick="AddCount(this.innerText)">9</button>
+      <button onclick="deleteLast()">DEL</button> <br>
 
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>+</button> <br>
+      <button onclick="AddCount(this.innerText)">4</button>
+      <button onclick="AddCount(this.innerText)">5</button>
+      <button onclick="AddCount(this.innerText)">6</button>
+      <button onclick="AddCount(this.innerText)">+</button> <br>
 
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>-</button> <br>
+      <button onclick="AddCount(this.innerText)">1</button>
+      <button onclick="AddCount(this.innerText)">2</button>
+      <button onclick="AddCount(this.innerText)">3</button>
+      <button onclick="AddCount(this.innerText)">-</button> <br>
 
-      <button>%</button>
-      <button>0</button>
-      <button>.</button>
-      <button>&times;</button> <br>
+      <button onclick="AddCount(this.innerText)">%</button>
+      <button onclick="AddCount(this.innerText)">0</button>
+      <button onclick="AddCount(this.innerText)">.</button>
+      <button onclick="AddCount(this.innerText)">x</button> <br>
 
-      <button style="background-color: red;">AC</button>
-      <button>÷</button>
-      <button style="width: 130px; background-color: grey;">=</button>
+      <button style="background-color: red;" onclick="clearScreen()">AC</button>
+      <button onclick="AddCount(this.innerText)">÷</button>
+      <button style="width: 130px; background-color: grey;" onclick="result()">=</button>
 
     </div>
   </body>
 
   <script>
     // This section is for all the code: Javascript
-    
+    var input = document.getElementById("displayScreen");
+    function AddCount(a){
+      if (a==="x") {
+        input.value += "*";
+      } else {
+        input.value += a;
+      }
+    }
+    function result(){
+      input.value = eval(input.value);
+    }
+    function clearScreen(){
+      input.value = "";
+    }
+    function deleteLast(){
+      input.value = input.value.slice(0,input.value.length-1);
+    }
   </script>
