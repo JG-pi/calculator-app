@@ -77,9 +77,11 @@
     // This section is for all the code: Javascript
     var input = document.getElementById("displayScreen");
     function AddCount(a){
-      if (a==="x") {
+      if (a === "x") {
         input.value += "*";
-      } else {
+      } else if (a === "÷")
+        input.value += "/";
+      else {
         input.value += a;
       }
     }
