@@ -11,7 +11,37 @@
 
   <style>
     /* styles for the website: CSS */
-    * {
+    * {   margin: 0;
+    padding: 0;
+    }
+
+    h1 {
+      color: red;
+    }
+
+    .button-grid{
+      height: 430px;
+      width: 300px;
+      background-color: blanchedalmond;
+      margin: 50px auto;
+      padding: 24px;      
+    }
+
+    .button-grid>input{
+      height: 50px;
+      width: 100%;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .button-grid>button{
+      height: 70px;
+      width: 60px;
+      background-color: white;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      font-size: 20px;
+    }
 
   </style>
 
@@ -20,7 +50,7 @@
     <h1>Calculator</h1>
     <div class="button-grid">
     <input id="message" type="text"> <br>
-      <button>7</button>
+      <button onclick="AddCount(this.innerText)">7</button>
       <button>8</button>
       <button>9</button>
       <button>DEL</button> <br>
@@ -40,9 +70,9 @@
       <button>.</button>
       <button>&times;</button> <br>
 
-      <button>AC</button>
+      <button style="background-color: red;">AC</button>
       <button>÷</button>
-      <button>=</button>
+      <button style="width: 130px; background-color: grey;">=</button>
 
     </div>
   </body>
